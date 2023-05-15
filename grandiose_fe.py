@@ -18,7 +18,7 @@ import streamlit as st
 
 data = pd.read_excel('Clean Data(F&V).xlsx',sheet_name='Sheet2')
 
-st.image('grandiose.png',use_column_width=True)
+st.image('grandiose_1.png',use_column_width=True)
 
 st.header('PRICE PARITY AND PRODUCT MIX')
 
