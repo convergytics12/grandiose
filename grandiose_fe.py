@@ -42,15 +42,15 @@ rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
 
 if rad == 'Grandiose':
     st.subheader('Grandiose')
-    df = data[data['Sub_category']==c1][['Sub_category','Product Name','Grandiose_Price']]
+    df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Grandiose_Price']]
     st.dataframe(df)
 if rad == 'Spinneys':
     st.subheader('Spinneys')
-    df = data[data['Sub_category']==c1][['Sub_category','Product Name','Spinneys_Price']]
+    df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Spinneys_Price']]
     st.dataframe(df)
 if rad == 'Price Parity':
     st.subheader('Price Parity')
-    df = data[data['Sub_category']==c1][['Sub_category','Product Name','Grandiose_Price','Spinneys_Price']]
+    df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
     st.dataframe(df)
     
     
