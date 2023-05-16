@@ -11,4 +11,3 @@ joblib
 openpyxl
 numpy<1.24.0
 streamlit_folium
-webbrowser
