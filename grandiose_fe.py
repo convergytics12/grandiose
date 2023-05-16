@@ -20,7 +20,7 @@ data = pd.read_excel('Clean Data(F&V).xlsx',sheet_name='Sheet2')
 
 st.image('grandiose_1.png',use_column_width=True)
 
-rad3 = st.sidebar.radio('**Navigation**',['Select an option','Price Parity','Product Mix','Contact us'])
+rad3 = st.sidebar.radio('**Navigation**',['Select an option','Price Parity','Product Mix'])
 
 if rad3=='Select an option':
     pass
@@ -95,14 +95,6 @@ if rad3=='Product Mix':
     if rad1 == 'Not in Grandiose':
         pass
         
-
-
-import webbrowser
-
-url = 'https://www.grandiose.ae/contact/'
-
-if rad3 =='Contact us':
-    webbrowser.open_new_tab(url)
     
     
         
