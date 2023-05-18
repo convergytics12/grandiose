@@ -18,7 +18,7 @@ import streamlit as st
 
 data = pd.read_excel('Clean Data(F&V).xlsx',sheet_name='Sheet2')
 
-st.image('grandiose_1.png',use_column_width=True)
+st.image('grandiose_building_.png',use_column_width=True)
 
 rad3 = st.sidebar.radio('**Navigation**',['Select an option','Price Parity','Product Mix'])
 
