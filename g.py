@@ -43,6 +43,8 @@ if rad3=='Price Parity':
     if(cat=='Fruits and Vegetables'):
         sb1 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables'])
         
+        rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
+        
         if rad == 'Grandiose':
             st.subheader('Grandiose')
             df = gfv[gfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
@@ -68,7 +70,7 @@ if rad3=='Price Parity':
         sb4 = st.selectbox('Sub-Category',['Select an option','Still Water', 'Sparkling Water', 'Soft Drinks', 'Juices',
        'Healthy Drinks', 'Fresh Juices', 'Energy Drinks','Ice Tea & Coffee', 'Malt Drinks'])
         
-    rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
+    
     
     
         
