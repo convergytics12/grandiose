@@ -42,6 +42,21 @@ if rad3=='Price Parity':
     cat = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables','Household','Frozen Food','Beverages'])
     if(cat=='Fruits and Vegetables'):
         sb1 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables'])
+        
+        if rad == 'Grandiose':
+            st.subheader('Grandiose')
+            df = gfv[gfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
+            st.dataframe(df)
+        if rad == 'Spinneys':
+            st.subheader('Spinneys')
+            df = sfv[sfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
+            st.dataframe(df)
+        if rad == 'Price Parity':
+            st.subheader('Price Parity')
+            df = cfv[cfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
+            st.dataframe(df)
+        
+        
     if(cat=='Household'):
         sb2 = st.selectbox('Sub-Category',['Select an option','Laundry Supplies', 'Carpet & Floor', 'Disinfectants',
        'Bathroom & Kitchen', 'Insect & Pest Control','Foil & Cling Films', 'Cleaning Tools', 'Dishwashing',
@@ -55,18 +70,7 @@ if rad3=='Price Parity':
         
     rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
     
-    if rad == 'Grandiose':
-        st.subheader('Grandiose')
-        df = gfv[gfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
-        st.dataframe(df)
-    if rad == 'Spinneys':
-        st.subheader('Spinneys')
-        df = sfv[sfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
-        st.dataframe(df)
-    if rad == 'Price Parity':
-        st.subheader('Price Parity')
-        df = cfv[cfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
-        st.dataframe(df)
+    
         
 if rad3=='Product Mix':
 
