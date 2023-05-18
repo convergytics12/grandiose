@@ -17,6 +17,7 @@ import streamlit as st
 #sh = pd.read_excel('Spinneys_Household_Updated.xlsx')
 
 data = pd.read_excel('Clean Data(F&V).xlsx',sheet_name='Sheet2')
+data10=pd.read_excel('Grandiose Beverages.xlsx)
 
 st.image('grandiose_building_.png',use_column_width=True)
 
@@ -51,6 +52,7 @@ if rad3=='Price Parity':
         st.subheader('Grandiose')
         df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Grandiose_Price']]
         st.dataframe(df)
+        st.dataframe(data10)
     if rad == 'Spinneys':
         st.subheader('Spinneys')
         df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Spinneys_Price']]
