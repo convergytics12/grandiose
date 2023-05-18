@@ -27,7 +27,7 @@ cb=pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Beverages')
 
 #data = pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Fruits and Vegs')
 
-st.image('grandiose_building_.png',use_column_width=True)
+st.image('grandiose_convergytics.png',use_column_width=True)
 
 rad3 = st.sidebar.radio('**Navigation**',['Select an option','Price Parity','Product Mix'])
 
