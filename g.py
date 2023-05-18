@@ -25,7 +25,7 @@ cb=pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Beverages')
 
 
 
-data = pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Fruits and Vegs')
+#data = pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Fruits and Vegs')
 
 st.image('grandiose_building_.png',use_column_width=True)
 
@@ -57,7 +57,7 @@ if rad3=='Price Parity':
     
     if rad == 'Grandiose':
         st.subheader('Grandiose')
-        df = data[data['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Grandiose_Price']]
+        df = gfv[gfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
         st.dataframe(df)
     if rad == 'Spinneys':
         st.subheader('Spinneys')
