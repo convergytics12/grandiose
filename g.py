@@ -61,7 +61,7 @@ if rad3=='Price Parity':
         st.dataframe(df)
     if rad == 'Spinneys':
         st.subheader('Spinneys')
-        df = sfv[sfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Spinneys_Price']]
+        df = sfv[sfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
         st.dataframe(df)
     if rad == 'Price Parity':
         st.subheader('Price Parity')
