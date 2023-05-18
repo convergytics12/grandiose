@@ -1,23 +1,31 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May 15 11:28:11 2023
-
-@author: Akshays
-"""
 
 import pandas as pd
 import streamlit as st
 
+#fruits and vegetables
+gfv=pd.read_excel('Grandiose F&V (Updated).xlsx')
+sfv=pd.read_excel('Spinneys_Fruits_&_Vegetables_Updated.xlsx')
+cfv=pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Fruits and Vegs')
+
+#HouseHold
+ghh=pd.read_excel('Grandiose HouseHold.xlsx')
+shh=pd.read_excel('Spinneys_Household_Updated.xlsx')
+chh=pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='HouseHold')
+
+#Frozen
+gf=pd.read_excel('Grandiose Frozen.xlsx')
+sf=pd.read_excel('Spinneys_Frozen.xlsx')
+cf=pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Frozen')
+
+#Beverages
+gb=pd.read_excel('Grandiose Beverages.xlsx')
+sb=pd.read_excel('Spinneys Beverage.xlsx')
+cb=pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Beverages')
 
 
 
-#gfv = pd.read_excel('Grandiose F&V (Updated).xlsx')
-#gh = pd.read_excel('Grandiose HouseHold.xlsx')
-#sfv = pd.read_excel('Spinneys_Fruits_&_Vegetables_Updated.xlsx')
-#sh = pd.read_excel('Spinneys_Household_Updated.xlsx')
 
-data = pd.read_excel('Clean Data(F&V).xlsx',sheet_name='Sheet2')
-data10=pd.read_excel('Grandiose Beverages.xlsx')
+data = pd.read_excel('Grandiose Cleaned Data.xlsx',sheet_name='Fruits and Vegs')
 
 st.image('grandiose_building_.png',use_column_width=True)
 
@@ -31,35 +39,33 @@ if rad3=='Price Parity':
     st.header('PRICE PARITY')
     
     
-    company1 = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables','Household'])
-    if(company1=='Fruits and Vegetables'):
-        c1 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables','Organic'])
-    if(company1=='Household'):
-        c2 = st.selectbox('Sub-Category',['Laundry Supplies', 'Disinfectants', 'Dishwashing',
-       'Carpet & Floor', 'Glass & Surface', 'Bathroom & Kitchen',
-       'Cleaning Tools', 'Garbage Bags & Bins', 'Air Fresheners',
-       'Containers & Storage', 'Foil & Cling Films',
-       'Facial & Pocket Tissues', 'Kitchen & Toilet Rolls',
-       'Insect & Pest Control', 'Shoes Care', 'Disposable Cutlery',
-       'Batteries', 'Wires & Plugs', 'Light Bulbs',
-       'Lighters, Matches & Candles', 'Outdoor & Garden',
-       'Cookware, Bakeware & Utensils', 'Tableware',
-       'Tumblers, Tea & Coffee Pots'])
+    cat = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables','Household','Frozen Food','Beverages'])
+    if(cat=='Fruits and Vegetables'):
+        sb1 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables','Organic'])
+    if(cat=='Household'):
+        sb2 = st.selectbox('Sub-Category',['Select an option','Laundry Supplies', 'Carpet & Floor', 'Disinfectants',
+       'Bathroom & Kitchen', 'Insect & Pest Control','Foil & Cling Films', 'Cleaning Tools', 'Dishwashing',
+       'Air Fresheners', 'Kitchen & Toilet Rolls', 'Containers & Storage','Lighters, Matches & Candles', 'Glass & Surface', 'Shoes Care'])
+    if(cat=='Frozen Food'):
+        sb3 = st.selectbox('Sub-Category',['Select an option','Fruits & Vegetables', 'Chicken & Turkey', 'Fish & Seafood',
+       'Breaded & Fries', 'Burgers, Meatballs & Sausage','Appetizers & Snacks', 'Pastries', 'Ice Cream','French Fries & Chips', 'Meat', 'Ready Meals','Vegan & Alternatives'])
+    if(cat=='Beverages'):
+        sb4 = st.selectbox('Sub-Category',['Select an option','Still Water', 'Sparkling Water', 'Soft Drinks', 'Juices',
+       'Healthy Drinks', 'Fresh Juices', 'Energy Drinks','Ice Tea & Coffee', 'Malt Drinks'])
         
     rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
     
     if rad == 'Grandiose':
         st.subheader('Grandiose')
-        df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Grandiose_Price']]
+        df = data[data['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Grandiose_Price']]
         st.dataframe(df)
-        st.dataframe(data10)
     if rad == 'Spinneys':
         st.subheader('Spinneys')
-        df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Spinneys_Price']]
+        df = data[data['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Spinneys_Price']]
         st.dataframe(df)
     if rad == 'Price Parity':
         st.subheader('Price Parity')
-        df = data[data['Sub_category']==c1][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
+        df = data[data['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
         st.dataframe(df)
         
 if rad3=='Product Mix':
