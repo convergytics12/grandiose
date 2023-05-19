@@ -38,7 +38,7 @@ if rad3=='Price Parity':
 
     st.header('PRICE PARITY')
     
-    com=st.radio(['Select an option','Grandiose Products','Spinneys Products'] 
+    #com=st.radio(['Select an option','Grandiose Products','Spinneys Products'] 
     cat = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables','Household','Frozen Food','Beverages'])
     if(cat=='Fruits and Vegetables'):
         sb1 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables'])
