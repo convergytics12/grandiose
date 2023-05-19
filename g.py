@@ -130,7 +130,7 @@ if rad3=='Product Mix':
         
    
         
-    rad1 = st.radio('',['Select an option','Grandiose','Not in Grandiose'])
+    rad1 = st.radio('',['Select an option','Grandiose','Not in Grandiose(In Spinneys')])
         
     if rad1 == 'Grandiose':
         df = pd.read_excel('try1.xlsx',sheet_name=c3,header=None)
