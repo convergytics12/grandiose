@@ -171,7 +171,7 @@ if rad3=='Product Mix':
         st.write(df.to_html(index=False, header=False, escape=False),unsafe_allow_html=True)
         
     if rad1 == 'Not in Grandiose':
-        dn=pd.read_excel('Not_in_Grandiose.xlsx)
+        dn=pd.read_excel('Not_in_Grandiose.xlsx')
         dn=dn[['Sub_category','Product Name','Quantity','Price']]
         st.dataframe(dn)
         
