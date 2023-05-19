@@ -119,7 +119,7 @@ if rad3=='Product Mix':
 
     st.header('PRODUCT MIX')
     
-    rad2 = st.radio('**Select the Location**',['Oud Metha'])
+    rad2 = st.radio('**Select the Location**',['Oud Metha','Victory Heights(Sport City)','Umm Suqeim 1'])
     
     
     company2 = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables'])
