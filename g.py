@@ -88,58 +88,28 @@ if rad3=='Price Parity':
        'Bathroom & Kitchen', 'Insect & Pest Control','Foil & Cling Films', 'Cleaning Tools', 'Dishwashing',
        'Air Fresheners', 'Kitchen & Toilet Rolls', 'Containers & Storage','Lighters, Matches & Candles', 'Glass & Surface', 'Shoes Care'])
         
-        rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
-        
-        if rad == 'Grandiose':
-            st.subheader('Grandiose')
-            df = ghh[ghh['Sub_category']==sb2][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
-        if rad == 'Spinneys':
-            st.subheader('Spinneys')
-            df = shh[shh['Sub_category']==sb2][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
-        if rad == 'Price Parity':
-            st.subheader('Price Parity')
-            df = chh[chh['Sub_category']==sb2][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
-            st.dataframe(df)
+       
+        st.subheader('Price Parity')
+        df = chh[chh['Sub_category']==sb2][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
+        st.dataframe(df)
             
     if(cat=='Frozen Food'):
         sb3 = st.selectbox('Sub-Category',['Select an option','Fruits & Vegetables', 'Chicken & Turkey', 'Fish & Seafood',
        'Breaded & Fries', 'Burgers, Meatballs & Sausage','Appetizers & Snacks', 'Pastries', 'Ice Cream','French Fries & Chips', 'Meat', 'Ready Meals','Vegan & Alternatives'])
         
-        rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
         
-        if rad == 'Grandiose':
-            st.subheader('Grandiose')
-            df = gf[gf['Sub_category']==sb3][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
-        if rad == 'Spinneys':
-            st.subheader('Spinneys')
-            df = sf[sf['Sub_category']==sb3][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
-        if rad == 'Price Parity':
-            st.subheader('Price Parity')
-            df = cf[cf['Sub_category']==sb3][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
-            st.dataframe(df)
+        st.subheader('Price Parity')
+        df = cf[cf['Sub_category']==sb3][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
+        st.dataframe(df)
             
     if(cat=='Beverages'):
         sb4 = st.selectbox('Sub-Category',['Select an option','Still Water', 'Sparkling Water', 'Soft Drinks', 'Juices',
        'Healthy Drinks', 'Fresh Juices', 'Energy Drinks','Ice Tea & Coffee', 'Malt Drinks'])
         
-        rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
         
-        if rad == 'Grandiose':
-            st.subheader('Grandiose')
-            df = gb[gb['Sub_category']==sb4][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
-        if rad == 'Spinneys':
-            st.subheader('Spinneys')
-            df = sb[sb['Sub_category']==sb4][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
-        if rad == 'Price Parity':
-            st.subheader('Price Parity')
-            df = cb[cb['Sub_category']==sb4][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
-            st.dataframe(df)
+        st.subheader('Price Parity')
+        df = cb[cb['Sub_category']==sb4][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
+        st.dataframe(df)
         
     
     
