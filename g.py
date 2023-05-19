@@ -172,7 +172,7 @@ if rad3=='Product Mix':
         
     if rad1 == 'Not in Grandiose':
         dn=pd.read_excel('Not_in_Grandiose.xlsx')
-        dn=dn[['Sub_category','Product Name','Quantity','Price']]
+        dn=dn[['Sub_Category','Product_name','Quantity','Price']]
         st.dataframe(dn)
         
     
