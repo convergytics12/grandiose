@@ -48,8 +48,8 @@ if rad3=='Price Parity':
         st.dataframe(d3)
     if(comp=='Spinneys Products'):
         d4=pd.concat([sfv,shh],ignore_index=True)
-        d5=pd.concat([d1,sf],ignore_index=True)
-        d6=pd.concat([d2,sb],ignore_index=True)
+        d5=pd.concat([d4,sf],ignore_index=True)
+        d6=pd.concat([d5,sb],ignore_index=True)
         d6=gfv[['Sub_category','Product Name','Quantity','Price']]
         
         st.dataframe(d6)
