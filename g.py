@@ -137,7 +137,7 @@ if rad3=='Product Mix':
         df = df.fillna("")
         st.write(df.to_html(index=False, header=False, escape=False),unsafe_allow_html=True)
         
-    if rad1 == 'Not in Grandiose':
+    if rad1 == 'Not in Grandiose(In Spinneys)':
         dn=pd.read_excel('Not_in_Grandiose.xlsx')
         dn=dn[['Sub_Category','Product_name','Quantity','Price']]
         if(c3=='Fruits'):
