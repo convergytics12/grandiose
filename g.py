@@ -36,7 +36,7 @@ if rad3=='Select an option':
 
 if rad3=='Price Parity':
 
-    st.header('PRICE PARITY')
+    
     
     comp=st.radio('',['Select an option','Grandiose Products','Spinneys Products'])
     if(comp=='Grandiose Products'):
@@ -46,6 +46,15 @@ if rad3=='Price Parity':
         d3=gfv[['Sub_category','Product Name','Quantity','Price']]
         
         st.dataframe(d3)
+        
+        excel_button = st.button('Download as Excel')
+        if excel_button:
+            writer = pd.ExcelWriter('data.xlsx', engine='openpyxl')
+            d3.to_excel(writer, sheet_name='Sheet1', index=False)
+            writer.close()
+            with open('data.xlsx', 'rb') as f:
+                excel_data = f.read()
+                st.download_button(label='Click here to download', data=excel_data, file_name='data.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
     if(comp=='Spinneys Products'):
         d4=pd.concat([sfv,shh],ignore_index=True)
         d5=pd.concat([d4,sf],ignore_index=True)
@@ -53,6 +62,15 @@ if rad3=='Price Parity':
         d6=gfv[['Sub_category','Product Name','Quantity','Price']]
         
         st.dataframe(d6)
+        
+        excel_button = st.button('Download as Excel')
+        if excel_button:
+            writer = pd.ExcelWriter('data.xlsx', engine='openpyxl')
+            d6.to_excel(writer, sheet_name='Sheet1', index=False)
+            writer.close()
+            with open('data.xlsx', 'rb') as f:
+                excel_data = f.read()
+                st.download_button(label='Click here to download', data=excel_data, file_name='data.xlsx', mime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
         
     st.subheader('Price Parity')       
     cat = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables','Household','Frozen Food','Beverages'])
