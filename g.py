@@ -41,7 +41,7 @@ if rad3=='Price Parity':
     comp=st.radio('',['Select an option','Grandiose Products','Spinneys Products'])
     if(comp=='Grandiose Products'):
         d1=pd.concat([gfv,ghh],ignore_index=True)
-        d2=pd.concat([d1,gf],igonore_index=True)
+        d2=pd.concat([d1,gf],ignore_index=True)
         d3=pd.concat([d2,gb],ignore_index=True)
         d3=gfv[['Sub_category','Product Name','Quantity','Price']]
         
