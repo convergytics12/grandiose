@@ -173,7 +173,15 @@ if rad3=='Product Mix':
     if rad1 == 'Not in Grandiose':
         dn=pd.read_excel('Not_in_Grandiose.xlsx')
         dn=dn[['Sub_Category','Product_name','Quantity','Price']]
-        st.dataframe(dn)
+        if(c3=='Fruits'):
+            dn1=dn[dn['Sub_Category']==c3]
+            st.dataframe(dn1)
+        if(c3=='Vegetables'):
+            dn1=dn[dn['Sub_Category']==c3]
+            st.dataframe(dn1)
+        if(c3=='Organic'):
+            dn1=dn[dn['Sub_Category']==c3]
+            st.dataframe(dn1)
         
     
     
