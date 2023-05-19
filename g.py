@@ -54,21 +54,14 @@ if rad3=='Price Parity':
         
         st.dataframe(d6)
         
-            
+    st.subheader('Price Parity')       
     cat = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables','Household','Frozen Food','Beverages'])
     if(cat=='Fruits and Vegetables'):
         sb1 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables'])
         
-        rad = st.radio('',['Select an option','Grandiose','Spinneys','Price Parity'])
+        rad = st.radio('',['Select an option','Price Parity'])
         
-        if rad == 'Grandiose':
-            st.subheader('Grandiose')
-            df = gfv[gfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
-        if rad == 'Spinneys':
-            st.subheader('Spinneys')
-            df = sfv[sfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Price']]
-            st.dataframe(df)
+
         if rad == 'Price Parity':
             st.subheader('Price Parity')
             df = cfv[cfv['Sub_category']==sb1][['Sub_category','Product Name','Quantity','Grandiose_Price','Spinneys_Price']]
