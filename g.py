@@ -157,7 +157,7 @@ if rad3=='Product Mix':
     
     company2 = st.selectbox('**PRODUCTS**', ['Select an option','Fruits and Vegetables'])
     if(company2=='Fruits and Vegetables'):
-        c3 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables','Organic'])
+        c3 = st.selectbox('Sub-Category',['Select an option','Fruits','Vegetables'])
 
         
         
@@ -174,14 +174,12 @@ if rad3=='Product Mix':
         dn=pd.read_excel('Not_in_Grandiose.xlsx')
         dn=dn[['Sub_Category','Product_name','Quantity','Price']]
         if(c3=='Fruits'):
-            dn1=dn[dn['Sub_Category']==c3]
+            dn1=dn[dn['Sub_Category']=='Fruit']
             st.dataframe(dn1)
         if(c3=='Vegetables'):
             dn1=dn[dn['Sub_Category']==c3]
             st.dataframe(dn1)
-        if(c3=='Organic'):
-            dn1=dn[dn['Sub_Category']==c3]
-            st.dataframe(dn1)
+        
         
     
     
